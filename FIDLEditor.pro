@@ -14,10 +14,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    FIDLEForm/fidlform.cpp
+    FIDLForm/fidlform.cpp
 
 HEADERS  += mainwindow.h \
-    FIDLEForm/fidlform.h
+    FIDLForm/fidlform.h
 
 FORMS    += mainwindow.ui \
-    FIDLEForm/fidlform.ui
+    FIDLForm/fidlform.ui

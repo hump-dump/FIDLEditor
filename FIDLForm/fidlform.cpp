@@ -1,5 +1,6 @@
 #include "fidlform.h"
 #include "ui_fidlform.h"
+#include <QDebug>
 
 FIDLForm::FIDLForm(QWidget *parent) :
     QWidget(parent),
@@ -10,5 +11,6 @@ FIDLForm::FIDLForm(QWidget *parent) :
 
 FIDLForm::~FIDLForm()
 {
+   qDebug() << "~FIDLForm";
     delete ui;
 }
