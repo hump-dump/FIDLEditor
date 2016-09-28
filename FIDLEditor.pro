@@ -12,18 +12,11 @@ TARGET = FIDLEditor
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    FIDLForm/fidlform.cpp
-
-HEADERS  += mainwindow.h \
-    FIDLForm/fidlform.h
-
-FORMS    += mainwindow.ui \
-    FIDLForm/fidlform.ui
+SOURCES += main.cpp
 
 DISTFILES += \
-    qml/main.qml
+    qml/main.qml \
+    qml/filetree.qml
 
 RESOURCES += \
     qml.qrc

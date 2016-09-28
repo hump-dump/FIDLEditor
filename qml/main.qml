@@ -2,6 +2,8 @@ import QtQuick 2.0
 import QtQuick.Window 2.0
 import QtQuick.Controls 1.2
 
+import "filetree.qml" as FileTree
+
 ApplicationWindow {
     id: id_MainWindow
     title: qsTr("FIDL Editor");
@@ -30,6 +32,13 @@ ApplicationWindow {
                 onTriggered: close()
             }
         }
+    }
+
+
+    Loader {
+        id: id_fileTree
+        source: "filetree.qml"
+        visible: true
     }
 }
 
