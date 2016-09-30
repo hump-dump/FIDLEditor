@@ -5,6 +5,8 @@ import QtQuick.Layouts 1.2
 
 import "filetree.qml" as FileTree
 
+import ServicePlugin 1.0
+
 ApplicationWindow {
     id: id_MainWindow
     title: qsTr("FIDL Editor");
@@ -22,7 +24,9 @@ ApplicationWindow {
             signal signalNew
             MenuItem {
                 text : "New..."
-                onTriggered:id_MainWindow.signalNew
+                onTriggered: {
+                    id_MainWindow.signalNew
+                }
             }
 
             MenuSeparator {
@@ -37,20 +41,6 @@ ApplicationWindow {
     }
 
     Row {
-        TreeView {
-            TableViewColumn {
-                title: "Name"
-                role: "fileName"
-                width: 300
-            }
-            TableViewColumn {
-                title: "Permissions"
-                role: "filePermissions"
-                width: 100
-            }
-            model: fileSystemModel
-        }
-
         Column {
             Loader {
                 id: id_fileTree0

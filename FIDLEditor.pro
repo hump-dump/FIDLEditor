@@ -4,7 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui qml
+QT       += core gui quick qml
+
+CONFIG += qt quickplugin c++11
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,7 +14,12 @@ TARGET = FIDLEditor
 TEMPLATE = app
 
 
-SOURCES += main.cpp
+SOURCES += \
+    ServicePlugin/serviceplugin.cpp \
+    main.cpp
+
+HEADERS += \
+ServicePlugin/serviceplugin.h
 
 DISTFILES += \
     qml/main.qml \
