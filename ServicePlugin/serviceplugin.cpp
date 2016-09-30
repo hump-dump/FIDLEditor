@@ -24,3 +24,9 @@ ServicePlugin * ServicePlugin::instance()
 
     return pInstance;
 }
+
+void ServicePlugin::setMessage( const QString & message )
+{
+    qDebug() << "ServicePlugin::setMessage" << message;
+    m_message = message;
+}

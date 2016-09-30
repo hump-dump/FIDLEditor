@@ -14,7 +14,12 @@ ApplicationWindow {
     height: 480
     visible: true
 
-    signal singalNew
+    Service {
+        id: id_service
+        onMessageChanged: {
+            console.log(" onMessageChanged ")
+        }
+    }
 
     menuBar: MenuBar {
         Menu {
@@ -25,7 +30,8 @@ ApplicationWindow {
             MenuItem {
                 text : "New..."
                 onTriggered: {
-                    id_MainWindow.signalNew
+                    id_service.message = "cool";
+
                 }
             }
 
