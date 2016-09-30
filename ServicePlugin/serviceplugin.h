@@ -8,7 +8,10 @@ class ServicePlugin : public QQuickItem
     Q_OBJECT
     Q_DISABLE_COPY(ServicePlugin)
 
+    static ServicePlugin *pInstance;
 public:
+    static ServicePlugin * instance();
+
     ServicePlugin(QQuickItem *parent = 0);
     ~ServicePlugin();
 };

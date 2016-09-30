@@ -1,5 +1,7 @@
 #include "serviceplugin.h"
 
+ServicePlugin *ServicePlugin::pInstance = nullptr;
+
 ServicePlugin::ServicePlugin(QQuickItem *parent):
     QQuickItem(parent)
 {
@@ -12,4 +14,13 @@ ServicePlugin::ServicePlugin(QQuickItem *parent):
 
 ServicePlugin::~ServicePlugin()
 {
+}
+
+ServicePlugin * ServicePlugin::instance()
+{
+    if( nullptr == pInstance ) {
+        pInstance = new ServicePlugin;
+    }
+
+    return pInstance;
 }
