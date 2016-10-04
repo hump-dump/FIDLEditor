@@ -13,6 +13,7 @@ class ServicePlugin : public QQuickItem
     static ServicePlugin *pInstance;
 
     QString m_message;
+
 public:
     static ServicePlugin * instance();
 
@@ -25,6 +26,7 @@ public:
     }
 
     void setMessage( const QString & message );
+
 signals:
     void messageChanged();
 };
