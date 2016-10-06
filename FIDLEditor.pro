@@ -23,7 +23,9 @@ ServicePlugin/serviceplugin.h
 
 DISTFILES += \
     qml/main.qml \
-    qml/filetree.qml
+    qml/filetree.qml \
+    qml/landmeter/LandMeter.qml \
+    qml/landmeter/qmldir \
+    qml/landmeter/LMCompass.qml
 
-RESOURCES += \
-    qml.qrc
+RESOURCES +=
