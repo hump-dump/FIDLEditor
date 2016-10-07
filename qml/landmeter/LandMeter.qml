@@ -17,14 +17,12 @@ Item {
         height: parent.height
         visible: parent.visible
         color: "black"
-        border.width: 2
-        border.color: "green"
     }
 
     LMCompass {
-        x: 100
-        y: 100
-        width: 100
+        x: 2
+        y: itemHeight-compassHeight - 2
+        width: parent.width - 4
         height: compassHeight
     }
 
