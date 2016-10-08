@@ -32,6 +32,9 @@ Item {
         y:0
         width: statusbarWidth
         height: statusbarHeight
+
+        temperature: 26.4
+        pressure: 765
     }
 
     LMCompass {

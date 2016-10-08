@@ -15,7 +15,7 @@ Item {
         width: parent.width / 2
         fontSize: parent.height - 15
         leftText: "Temp:"
-        rightText: "23.5"
+        rightText: Number( temperature ).toFixed(1)
     }
     LMLabel {
         id: lPressure
@@ -24,6 +24,6 @@ Item {
         anchors.left: lTemp.right
         fontSize: parent.height - 15
         leftText: "Pres:"
-        rightText: "765"
+        rightText: Number( pressure ).toFixed()
     }
 }
