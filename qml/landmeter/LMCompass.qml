@@ -10,8 +10,22 @@ Item {
         console.log( compassDirection+ " -> " + cardinalDirections[Math.floor( compassDirection / ( 360 / cardinalDirections.length) )] );
     }
 
-    function calculateCardinal( degree ) {
-        return cardinalDirections[Math.floor( compassDirection / ( 360 / cardinalDirections.length) )];
+    function calculateCardinal( degree, floor ) {
+        var cardinalPos = 0;
+        if ( 0 == degree ) {
+            if( floor ) {
+                cardinalPos = cardinalDirections.length - 1;
+            } else {
+                cardinalPos = 1;
+            }
+        } else {
+            cardinalPos = floor ?
+                        Math.floor( compassDirection / ( 360 / cardinalDirections.length) ) :
+                        Math.ceil( compassDirection / ( 360 / cardinalDirections.length) );
+
+            if( cardinalPos >=cardinalDirections.length ) cardinalPos = 0;
+        }
+        return cardinalDirections[ cardinalPos ];
     }
 
     LMCompassText {
@@ -36,7 +50,7 @@ Item {
         width: gLandMeter.compassWidth / 3
         fontSize: gLandmeter.compassHeight - 15
         textColor: "#005000"
-        textString: calculateCardinal( compassDirection )
+        textString: calculateCardinal( compassDirection, true )
     }
 
     LMCompassText {
@@ -48,7 +62,7 @@ Item {
         width: gLandMeter.compassWidth / 3
         fontSize: gLandmeter.compassHeight - 15
         textColor: "#005000"
-        textString: Number( compassDirection + 30 ).toFixed(1)
+        textString: calculateCardinal( compassDirection, false )
     }
 
 }

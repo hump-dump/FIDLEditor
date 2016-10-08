@@ -5,7 +5,7 @@ Item {
 
     property int itemWidth: 320
     property int itemHeight: 240
-    property int compassHeight: 40
+    property int compassHeight: 50
     property int compassWidth: itemWidth - 4
 
     width: itemWidth
@@ -37,7 +37,7 @@ Item {
 //    }
 
     Timer {
-        interval: 50
+        interval: 500
         running: true
         repeat: true
         onTriggered: {
