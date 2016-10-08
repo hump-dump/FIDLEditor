@@ -1,11 +1,12 @@
 import QtQuick 2.0
 
 Item {
-    id: landmeter
+    id: gLandmeter
 
     property int itemWidth: 320
     property int itemHeight: 240
     property int compassHeight: 40
+    property int compassWidth: itemWidth - 4
 
     width: itemWidth
     height: itemHeight
@@ -20,9 +21,10 @@ Item {
     }
 
     LMCompass {
+        id: gCompass
         x: 2
         y: itemHeight-compassHeight - 2
-        width: parent.width - 4
+        width: compassWidth
         height: compassHeight
     }
 
@@ -34,5 +36,14 @@ Item {
 //        radius: height/2
 //    }
 
+    Timer {
+        interval: 50
+        running: true
+        repeat: true
+        onTriggered: {
+            gCompass.compassDirection += 0.5;
+            gCompass.compassDirection = gCompass.compassDirection % 360;
+        }
+    }
 }
 
