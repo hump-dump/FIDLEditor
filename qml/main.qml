@@ -61,8 +61,8 @@ ApplicationWindow {
 //        }
         LandMeter.LandMeter {
             id: gLandMeter
-            x: 10
-            y: 10
+//            x: 10
+//            y: 10
             visible: true
         }
 //    }

@@ -28,6 +28,7 @@ DISTFILES += \
     qml/landmeter/qmldir \
     qml/landmeter/LMCompass.qml \
     qml/landmeter/LMCompassText.qml \
-    qml/landmeter/LMStatusBar.qml
+    qml/landmeter/LMStatusBar.qml \
+    qml/landmeter/LMLabel.qml
 
 RESOURCES +=

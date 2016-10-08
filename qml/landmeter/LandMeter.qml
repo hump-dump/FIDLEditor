@@ -3,10 +3,12 @@ import QtQuick 2.0
 Item {
     id: gLandmeter
 
-    property int itemWidth: 320
-    property int itemHeight: 240
+    property int itemWidth: parent.width
+    property int itemHeight: parent.height
+//    property int itemWidth: 320
+//    property int itemHeight: 240
 
-    property int statusbarHeight: 50
+    property int statusbarHeight: 40
     property int statusbarWidth: itemWidth
 
     property int compassHeight: 50
@@ -30,7 +32,6 @@ Item {
         y:0
         width: statusbarWidth
         height: statusbarHeight
-
     }
 
     LMCompass {
@@ -42,7 +43,7 @@ Item {
     }
 
     Timer {
-        interval: 500
+        interval: 100
         running: true
         repeat: true
         onTriggered: {
