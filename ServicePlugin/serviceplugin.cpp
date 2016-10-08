@@ -3,13 +3,10 @@
 ServicePlugin *ServicePlugin::pInstance = nullptr;
 
 ServicePlugin::ServicePlugin(QQuickItem *parent):
-    QQuickItem(parent)
+    QObject(parent)
+//    QQuickItem(parent)
 {
-    // By default, QQuickItem does not draw anything. If you subclass
-    // QQuickItem to create a visual item, you will need to uncomment the
-    // following line and re-implement updatePaintNode()
-
-    // setFlag(ItemHasContents, true);
+    startTimer(1000);
 }
 
 ServicePlugin::~ServicePlugin()
@@ -25,8 +22,12 @@ ServicePlugin * ServicePlugin::instance()
     return pInstance;
 }
 
-void ServicePlugin::setMessage( const QString & message )
+void ServicePlugin::timerEvent( QTimerEvent * )
 {
-    qDebug() << "ServicePlugin::setMessage" << message;
-    m_message = message;
+    qDebug() << "ServicePlugin::timerEvent";
+
+    ++mTemperature;
+    emit temperatureChanged();
+    ++mPressure;
+    emit pressureChanged();
 }

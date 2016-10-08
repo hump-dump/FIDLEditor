@@ -1,2 +1,2 @@
-module com.fidleditor.serviceplugin
+module ServicePlugin
 plugin ServicePlugin

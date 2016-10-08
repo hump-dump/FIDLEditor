@@ -14,12 +14,12 @@ ApplicationWindow {
     height: 480
     visible: true
 
-    Service {
-        id: id_service
-        onMessageChanged: {
-            console.log(" onMessageChanged ")
-        }
-    }
+//    Service {
+//        id: id_service
+//        onMessageChanged: {
+//            console.log(" onMessageChanged ")
+//        }
+//    }
 
     menuBar: MenuBar {
         Menu {

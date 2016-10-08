@@ -3,30 +3,31 @@
 
 #include <QQuickItem>
 
-class ServicePlugin : public QQuickItem
+class ServicePlugin : public QObject
 {
     Q_OBJECT
     Q_DISABLE_COPY(ServicePlugin)
 
-    Q_PROPERTY(QString message READ getMessage WRITE setMessage NOTIFY messageChanged)
+    Q_PROPERTY( double temperature READ temperature NOTIFY temperatureChanged )
+    Q_PROPERTY( double pressure READ pressure NOTIFY pressureChanged )
 
     static ServicePlugin *pInstance;
 
-    QString m_message;
+    double mTemperature = 0;
+    double mPressure = 0;
 public:
     static ServicePlugin * instance();
 
     ServicePlugin(QQuickItem *parent = 0);
     ~ServicePlugin();
 
-    QString getMessage() const
-    {
-        return m_message;
-    }
-
-    void setMessage( const QString & message );
+    double temperature() { return mTemperature; }
+    double pressure() { return mPressure; }
 signals:
-    void messageChanged();
+    void temperatureChanged();
+    void pressureChanged();
+private:
+    void timerEvent( QTimerEvent * );
 };
 
 #endif // SERVICEPLUGIN_H

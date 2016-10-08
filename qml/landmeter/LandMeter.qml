@@ -18,7 +18,6 @@ Item {
     height: itemHeight
     visible: true
 
-
     Rectangle {
         width: parent.width
         height: parent.height
@@ -33,8 +32,8 @@ Item {
         width: statusbarWidth
         height: statusbarHeight
 
-        temperature: 26.4
-        pressure: 765
+        temperature: ServicePlugin.temperature
+        pressure: ServicePlugin.pressure
     }
 
     LMCompass {
@@ -46,7 +45,7 @@ Item {
     }
 
     Timer {
-        interval: 100
+        interval: 1000
         running: true
         repeat: true
         onTriggered: {
