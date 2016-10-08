@@ -5,6 +5,10 @@ Item {
 
     property int itemWidth: 320
     property int itemHeight: 240
+
+    property int statusbarHeight: 50
+    property int statusbarWidth: itemWidth
+
     property int compassHeight: 50
     property int compassWidth: itemWidth - 4
 
@@ -20,6 +24,15 @@ Item {
         color: "black"
     }
 
+    LMStatusBar {
+        id: gStatusBar
+        x:0
+        y:0
+        width: statusbarWidth
+        height: statusbarHeight
+
+    }
+
     LMCompass {
         id: gCompass
         x: 2
@@ -27,14 +40,6 @@ Item {
         width: compassWidth
         height: compassHeight
     }
-
-//    Rectangle {
-//        y: parent.height
-//        x: 100
-//        width:150
-//        height:150
-//        radius: height/2
-//    }
 
     Timer {
         interval: 500

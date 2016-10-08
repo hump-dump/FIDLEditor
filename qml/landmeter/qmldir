@@ -1,3 +1,4 @@
 LandMeter LandMeter.qml
 LMCompass LMCompass.qml
 LMCompassText LMCompassText.qml
+LMStatusBar LMStatusBar.qml
