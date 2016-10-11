@@ -4,9 +4,15 @@
 #
 #-------------------------------------------------
 
-QT       += core gui quick qml
+lessThan(QT_MAJOR_VERSION, 5 ) {
+   QT += core gui declarative
+} else {
+   QT += core gui quick
+}
 
 CONFIG += qt quickplugin c++11
+
+QMAKE_CXXFLAGS += -std=c++11
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

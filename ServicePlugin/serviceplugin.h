@@ -1,7 +1,7 @@
 #ifndef SERVICEPLUGIN_H
 #define SERVICEPLUGIN_H
 
-#include <QQuickItem>
+#include <QObject>
 
 class ServicePlugin : public QObject
 {
@@ -18,7 +18,7 @@ class ServicePlugin : public QObject
 public:
     static ServicePlugin * instance();
 
-    ServicePlugin(QQuickItem *parent = 0);
+    ServicePlugin(QObject *parent = 0);
     ~ServicePlugin();
 
     double temperature() { return mTemperature; }

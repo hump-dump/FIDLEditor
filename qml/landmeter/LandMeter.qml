@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 1.0
 
 Item {
     id: gLandmeter
@@ -8,10 +8,10 @@ Item {
 //    property int itemWidth: 320
 //    property int itemHeight: 240
 
-    property int statusbarHeight: 40
+    property int statusbarHeight: 30
     property int statusbarWidth: itemWidth
 
-    property int compassHeight: 50
+    property int compassHeight: 30
     property int compassWidth: itemWidth - 4
 
     width: itemWidth

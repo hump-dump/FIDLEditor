@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 1.0
 
 Item {
     property double temperature: 0.0

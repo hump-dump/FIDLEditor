@@ -1,8 +1,9 @@
 #include "serviceplugin.h"
+#include <QDebug>
 
 ServicePlugin *ServicePlugin::pInstance = nullptr;
 
-ServicePlugin::ServicePlugin(QQuickItem *parent):
+ServicePlugin::ServicePlugin(QObject *parent):
     QObject(parent)
 //    QQuickItem(parent)
 {
