@@ -7,14 +7,12 @@
 lessThan(QT_MAJOR_VERSION, 5 ) {
    QT += core gui declarative
 } else {
-   QT += core gui quick
+   QT += core gui qml quick widgets
 }
 
 CONFIG += qt quickplugin c++11
 
 QMAKE_CXXFLAGS += -std=c++11
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = FIDLEditor
 TEMPLATE = app
