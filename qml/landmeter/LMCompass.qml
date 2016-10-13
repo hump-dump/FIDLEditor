@@ -4,7 +4,7 @@ Item {
     visible: true
 
     property double compassDirection: 0
-    property var cardinalDirections: [ "N", "NE", "E", "SE", "S", "SW", "W", "NW" ]
+    property variant cardinalDirections: [ "N", "NE", "E", "SE", "S", "SW", "W", "NW" ]
 
     onCompassDirectionChanged: {
         console.log( calculateCardinal( compassDirection, true )+" <- " + compassDirection + " -> " + calculateCardinal( compassDirection, false ) );
