@@ -1,4 +1,8 @@
+<<<<<<< .merge_file_a17092
 import QtQuick 1.0
+=======
+import QtQuick 2.5
+>>>>>>> .merge_file_a19892
 
 Item {
     property string textColor: "white"

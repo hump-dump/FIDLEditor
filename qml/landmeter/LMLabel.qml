@@ -1,4 +1,8 @@
+<<<<<<< .merge_file_a08988
 import QtQuick 1.0
+=======
+import QtQuick 2.5
+>>>>>>> .merge_file_a17532
 
 Item {
     property string leftText: "Left"
