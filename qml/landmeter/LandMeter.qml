@@ -1,8 +1,5 @@
-<<<<<<< .merge_file_a17336
-import QtQuick 1.0
-=======
+// import QtQuick 1.0
 import QtQuick 2.5
->>>>>>> .merge_file_a08280
 
 Item {
     id: gLandmeter

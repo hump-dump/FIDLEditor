@@ -26,7 +26,8 @@ HEADERS += \
 ServicePlugin/serviceplugin.h
 
 DISTFILES += \
-    qml/main.qml \
+    qml/main4.qml \
+    qml/main5.qml \
     qml/filetree.qml \
     qml/landmeter/LandMeter.qml \
     qml/landmeter/qmldir \

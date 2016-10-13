@@ -1,8 +1,5 @@
-<<<<<<< .merge_file_a20200
-import QtQuick 1.0
-=======
+// import QtQuick 1.0
 import QtQuick 2.5
->>>>>>> .merge_file_a05208
 
 Item {
     property double temperature: 0.0
